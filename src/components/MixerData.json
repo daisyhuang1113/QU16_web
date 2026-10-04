@@ -1,0 +1,272 @@
+{
+  "front": {
+    "mix": {
+      "label": "混音調整區",
+      "zoomClass": "zoom-mix",
+      "position": { "left": "5.6%", "top": "9%", "height": "23.8%", "width": "43.1%" },
+      "parts": {
+        "gain": {
+          "label": "Gain",
+          "step": "先將輸出設在 0 準位，再請表演者以實際音量發聲或演奏，逐步調整 Gain；接著解除 Mute 並推起 Fader。",
+          "function": "控制輸入訊號的總增益。Peak 表示接近失真，0 表示訊號達 0 dB，Sig 表示已有訊號輸入。",
+          "warning": "Gain 調整輸入訊號量，Fader 決定送到輸出的音量。Peak 不可恆亮；亮起時應降低 Gain。",
+          "position": { "left": "6.3%", "top": "9.5%", "height": "12%", "width": "6%" }
+        },
+        "compressor": {
+          "label": "Comp",
+          "step": "按通道 Sel，選擇 Comp 並按 In。Compressor 可選 Hard／Soft Knee，並調 Gain、Attack、Release。",
+          "function": "Compressor 在訊號超過 Threshold 時壓低聲音，分別控制聲音的底部與峰值。",
+          "warning": "未按 In 時不會生效。門檻或壓縮量過高可能讓聲音消失或不自然；與gate同時使用會增加顆粒感。",
+          "position": { "left": "42.5%", "top": "12%", "height": "12%", "width": "5.8%" }
+        },
+        "gate": {
+          "label": "Gate",
+          "step": "按通道 Sel，選擇 Gate 或 Comp 並按 In。Gate 可調 Threshold、Depth、Attack、Hold、Release；Compressor 可選 Hard／Soft Knee，並調 Gain、Attack、Release。",
+          "function": "Gate 在訊號低於 Threshold 時壓低聲音；Compressor 在訊號超過 Threshold 時壓低聲音，分別控制聲音的底部與峰值。",
+          "warning": "未按 In 時不會生效。門檻或壓縮量過高可能讓聲音消失或不自然；兩者同時使用會增加顆粒感。",
+          "position": { "left": "36.5%", "top": "12%", "height": "12%", "width": "5.8%" }
+        },
+        "HPF": {
+          "label": "HPF",
+          "step": "選取通道後按 HPF，按 In 啟用，再從螢幕左下角或旋鈕調整截止頻率。",
+          "function": "減少機器低頻噪音、呼吸聲等不需要的低頻，並可從螢幕調整截止頻率。",
+          "warning": "頻率設得太高會削弱人聲或樂器需要的低頻，應持續監聽並小幅調整。",
+          "position": { "left": "6.3%", "top": "22%", "height": "11%", "width": "6%" }
+        },
+        "eq": {
+          "label": "PEQ",
+          "step": "選取通道並按 PEQ，按 In 啟用。選擇頻段後調整 Freq、Width 與 Gain，並觀察螢幕曲線。",
+          "function": "提供 LF、LM、HM、HF 四個頻段，可調整頻率、Q 值與增益，各頻段效果可疊加。",
+          "warning": "人聲多集中於中頻，但不宜只靠大幅提升中頻增加音量；應邊聽邊調整。",
+          "position": { "left": "12.5%", "top": "9.5%", "height": "23.5%", "width": "23.6%" }
+        },
+        "Pan": {
+          "label": "Pan",
+          "step": "按通道 Sel，調整音訊偏向方向。",
+          "function": "音訊偏移方向。",
+          "warning": "No。",
+          "position": { "left": "41%", "top": "24.5%", "height": "8.5%", "width": "7.5%" }
+        },
+        "geq": {
+          "label": "GEQ",
+          "step": "選擇輸出後進入 GEQ，使用 Fader Flip 或畫面控制各頻段，邊監聽邊小幅修整。",
+          "function": "用於 Output 的等化調整；前段約 31 Hz–1 kHz，後段約 500 Hz–16 kHz。",
+          "warning": "輸入通道沒有 GEQ。大幅提升頻段可能增加回授或使音色失衡。",
+          "position": { "left": "36.5%", "top": "24.5%", "height": "8.5%", "width": "4.3%" }
+        }
+      }
+    },
+    "fader": {
+      "label": "Fader 區",
+      "zoomClass": "zoom-fader",
+      "position": { "left": "5.6%", "top": "33%", "height": "55%", "width": "75%" },
+      "parts": {
+        "mute": {
+          "label": "Mute",
+          "step": "送出聲音前先確認通道已解除 Mute，再推起該通道 Fader。",
+          "function": "控制單一通道是否輸出聲音；亮紅燈代表該通道已靜音。",
+          "warning": "若 Gain 與 Fader 都已調整但沒有聲音，先檢查 Mute 是否仍亮紅燈。",
+          "position": { "left": "12%", "top": "34%", "height": "4%", "width": "67%" }
+        },
+        "fader": {
+          "label": "Fader",
+          "step": "選擇需要的 Layer，確認目前頁面與輸出，再推動通道 Fader；需要一起收掉整組 Mix 時可使用 Mix Master。",
+          "function": "Fader 控制每軌送至目前輸出的音量。Layer 可切換 CH1–CH16、立體聲輸入、FX Return 與 Output。",
+          "warning": "操作前先確認 Layer，避免誤調其他通道。Fader 不取代 Gain，兩者需依序設定。",
+          "position": { "left": "12%", "top": "56%", "height": "33%", "width": "67%" }
+        },
+        "select": {
+          "label": "Sel",
+          "step": "按通道 Sel 即可選擇調整通道。",
+          "function": "Sel 選取通道。",
+          "warning": "沒按Sel，不會調整該軌參數。",
+          "position": { "left": "12%", "top": "38.2%", "height": "3%", "width": "67%" }
+        },
+        "pfl": {
+          "label": "Assign & Pre Fader",
+          "step": "在 LR 或指定 Mix 頁面長按 Pre Fade，再按通道 Sel 切換 Pre／Post；Sel 亮為 Pre、暗為 Post。按 Assign 後，以 Sel 燈確認是否送入目前輸出。",
+          "function": "Sel 選取通道；Assign 決定該軌是否送到目前輸出；Pre／Post 決定 Mix 音量是否跟隨 LR Fader。",
+          "warning": "舞台監聽常用 Pre，使樂手的監聽比例不受外場 LR 影響；Post 會跟隨 LR Fader。LR 本身不使用 Pre／Post。",
+          "position": { "left": "7.5%", "top": "36.5%", "height": "8%", "width": "4%" }
+        },
+        "pafl": {
+          "label": "PAFL",
+          "step": "按下通道 PAFL，以耳機與右側電平表檢查訊號；完成後再次按下取消。",
+          "function": "單獨監聽選定通道，並讓右側電平表顯示該軌訊號量。",
+          "warning": "PAFL 不等同於把聲音送入 LR 或 Mix；仍需確認 Assign、Mute 與 Fader。",
+          "position": { "left": "12%", "top": "41.3%", "height": "4%", "width": "67%" }
+        }
+      }
+    },
+    "screen": {
+      "label": "螢幕顯示區",
+      "zoomClass": "zoom-screen",
+      "position": { "left": "49.4%", "top": "9%", "height": "23.8%", "width": "31.2%" },
+      "parts": {
+        "source": {
+          "label": "Source",
+          "step": "按通道 Sel 與 Processing，在螢幕左下角選 Source，按 Fn 後旋轉控制旋鈕選擇來源，再按 Close。",
+          "function": "設定通道輸入來源，可選 Local、dSNAKE 或 USB。Local 顯示紅色，dSNAKE 顯示黃色。",
+          "warning": "連接 Stagebox 時須選 dSNAKE；選錯來源會收不到訊號。開啟 48V 幻象電源前先確認設備需求。",
+          "position": { "left": "49.8%", "top": "13%", "height": "19.5%", "width": "24%" }
+        },
+        "routing": {
+          "label": "Routing",
+          "step": "先選取通道，再按 Routing，逐一確認輸出指派與 Pre／Post 狀態。",
+          "function": "查看目前通道送往各輸出的狀態，以及每個路由使用 Pre 或 Post Fader。",
+          "warning": "若某組監聽沒有聲音，除了音量，也要檢查該通道是否 Assign 到指定 Mix。",
+          "position": { "left": "75%", "top": "13%", "height": "5%", "width": "4%" }
+        },
+        "scenes": {
+          "label": "Scenes",
+          "step": "調整完成後進入 Scenes，選擇位置並按 Store，可命名場景；需要時選取場景並按 Recall。",
+          "function": "將各通道目前參數儲存為場景，方便彩排後於演出時快速叫回。",
+          "warning": "共用場地使用完畢後，應刪除本次場景並 Recall 回第一個場景；Recall 前先確認場景正確。",
+          "position": { "left": "75%", "top": "24%", "height": "5%", "width": "4%" }
+        },
+        "fx": {
+          "label": "FX",
+          "step": "切到 FX Send，解除來源通道 Mute 並推起 Send；再切到 FX Return，推起 Return 與輸出 Fader。要保留原音，也要確認 LR 頁面的原通道 Fader 與 Assign。",
+          "function": "先將原始通道送入效果器，再由 FX Return 將效果聲送至輸出；效果器亦可設定 Pre 或 Post。",
+          "warning": "操作前記得切換正確 Layer。Post 通常同時保留原音與效果音；只需效果音時可改 Pre，或關閉原通道 LR Assign。",
+          "position": { "left": "75%", "top": "20%", "height": "4%", "width": "4%" }
+        }
+      }
+    },
+    "output": {
+      "label": "Output 區",
+      "zoomClass": "zoom-output",
+      "position": { "left": "81%", "top": "9%", "height": "79%", "width": "12.5%" },
+      "parts": {
+        "meter": {
+          "label": "Output Meter",
+          "step": "送音時觀察電平表，搭配 PAFL 檢查單軌訊號，並依 Peak 指示調整增益。",
+          "function": "平時顯示總輸出音量；按通道 PAFL 後改為顯示該軌監聽訊號量。",
+          "warning": "電平長時間過高或 Peak 恆亮可能失真，應降低 Gain 或相關輸出音量。",
+          "position": { "left": "80.5%", "top": "10%", "height": "17.5%", "width": "6%" }
+        },
+        "mix-select": {
+          "label": "Mix Select",
+          "step": "先按目標 LR、FX 或 Mix，再調整各通道 Assign、Pre／Post 與 Fader。",
+          "function": "切換 LR、FX Send 與 Mix1–Mix10，讓通道 Fader 控制目前所選輸出的混音比例。",
+          "warning": "推 Fader 前須確認目前選到哪一組 Mix，以免改動錯誤輸出。",
+          "position": { "left": "87%", "top": "52%", "height": "37%", "width": "6%" }
+        },
+        "master": {
+          "label": "Master Fader",
+          "step": "選擇目標輸出，將 Master 設至適當準位，再依序調整來源 Gain、Mute 與通道 Fader。",
+          "function": "控制目前所選 LR 或 Mix 的總輸出音量；應先設定輸出，再調整各輸入通道。",
+          "warning": "Master 會同時影響該輸出的所有輸入，不宜用它取代各通道的音量平衡。",
+          "position": { "left": "81%", "top": "52%", "height": "37%", "width": "6%" }
+        }
+      }
+    }
+  },
+  "rear": {
+    "b-input": {
+      "label": "Input",
+      "zoomClass": "zoom-b-input",
+      "position": { "left": "1.2%", "top": "22%", "height": "26%", "width": "97.5%" },
+      "parts": {
+        "XLR": {
+          "label": "XLR Input",
+          "step": "接到對應 XLR 孔，選取通道並確認 Source 為 Local，再調整 Gain、Mute 與 Fader。",
+          "function": "CH1–CH16 的單聲道平衡式輸入，可連接麥克風或其他 XLR 訊號。",
+          "warning": "同一通道的 XLR 與 Phone 只能擇一。開啟 48V 幻象電源前須確認設備需要且接線正確。",
+          "position": { "left": "9%", "top": "35%", "height": "13%", "width": "88%" }
+        },
+        "line": {
+          "label": "Line Input",
+          "step": "接到對應 Line 孔，確認 Source 為 Local，再調整 Gain、Mute 與 Fader。",
+          "function": "CH1–CH16 的 6.3 mm 單聲道 Line 輸入，可連接樂器或線路訊號。",
+          "warning": "同一通道不可同時使用 Phone 與 XLR 輸入。",
+          "position": { "left": "9%", "top": "23%", "height": "10%", "width": "88%" }
+        },
+        "lamp": {
+          "label": "Lamp",
+          "step": "將工作燈接到背板左上方 Lamp 插座並調整照明方向。",
+          "function": "可連接相容的工作燈，協助在昏暗環境辨識混音機控制介面。",
+          "warning": "請使用相容規格的工作燈，避免拉扯或碰撞接頭。",
+          "position": { "left": "3%", "top": "35%", "height": "13%", "width": "6%" }
+        },
+        "talkback": {
+          "label": "Talkback",
+          "step": "接上 Talkback 麥克風，在 Setup 設定要送達的監聽輸出，再使用面板 Talk 鍵。",
+          "function": "連接對講麥克風，讓 PA 人員與舞台表演者溝通。",
+          "warning": "使用前確認路由，避免對講內容送到外場 LR。",
+          "position": { "left": "3%", "top": "23%", "height": "11%", "width": "6%" }
+        }
+      }
+    },
+    "b-mixbus": {
+      "label": "Output Mixbus",
+      "zoomClass": "zoom-b-mixbus",
+      "position": { "left": "31.8%", "top": "50%", "height": "30%", "width": "66.9%" },
+      "parts": {
+        "main-lr": {
+          "label": "Main LR Output",
+          "step": "接妥左右輸出後選擇 LR，先設定 Master，再調整各輸入的 Assign、Mute 與 Fader。",
+          "function": "將 LR 主混音送至外場左右聲道喇叭系統。",
+          "warning": "依 PA 系統正確順序開關機；送音前確認主輸出電平與喇叭狀態。",
+          "position": { "left": "31.5%", "top": "50.5%", "height": "12%", "width": "11.3%" }
+        },
+        "mix-1-4": {
+          "label": "Mono Outputs",
+          "step": "接到監聽系統後選擇 Mix1–Mix4，設定各通道 Assign、Pre／Post 與 Fader，再調整 Mix Master。",
+          "function": "四組單聲道副輸出，常用於舞台監聽等獨立混音。",
+          "warning": "舞台監聽通常使用 Pre Fader，避免外場 LR 的調整改變樂手監聽比例。",
+          "position": { "left": "75.5%", "top": "50.5%", "height": "12%", "width": "21%" }
+        },
+        "mix-5-10": {
+          "label": "Stereo Outputs",
+          "step": "成對連接後選擇對應 Mix，設定 Assign、Pre／Post、Pan 與 Fader，再調整 Mix Master。",
+          "function": "Mix 5–6、7–8、9–10 為三組立體聲副輸出，可建立獨立立體聲監聽或其他輸出。",
+          "warning": "須成對連接左右輸出，並確認 Pan 與左右聲道接線一致。",
+          "position": { "left": "43.3%", "top": "50.5%", "height": "12%", "width": "32%" }
+        },
+        "power": {
+          "label": "Power",
+          "step": "所有訊號線與輸出設備確認完成後，依 PA 系統正確順序開機；結束時依相反順序關機。",
+          "function": "控制 Qu-16 電源，開關位於背板右下方電源插座旁。",
+          "warning": "遵守 PA 開關機順序，避免喇叭產生突波聲。",
+          "position": { "left": "83%", "top": "68%", "height": "12%", "width": "8%" }
+        }
+      }
+    },
+    "b-output": {
+      "label": "Output 與數位連接",
+      "zoomClass": "zoom-b-output",
+      "position": { "left": "1.2%", "top": "50%", "height": "30%", "width": "30%" },
+      "parts": {
+        "stereo": {
+          "label": "ST1/ST2 Stereo Inputs",
+          "step": "成對接上左右聲道，切到 ST1 或 ST2 Layer，解除 Mute、確認 Assign，再推起 Fader。",
+          "function": "兩組使用 6.3 mm Phone 接頭的平衡式 Line 立體聲輸入。",
+          "warning": "左右聲道應成對接線並保持電平一致。",
+          "position": { "left": "3%", "top": "50%", "height": "17%", "width": "10.5%" }
+        },
+        "network": {
+          "label": "Network",
+          "step": "將網路設備接至 Network 孔，完成網路設定後以相容控制程式連接混音機。",
+          "function": "連接 Wi-Fi 網路設備後，可使用 iPad 遠端控制 Qu-16。",
+          "warning": "Network 與 dSNAKE 外觀相似但用途不同，不可接錯。",
+          "position": { "left": "6%", "top": "70.5%", "height": "9%", "width": "5%" }
+        },
+        "dsnake": {
+          "label": "dSNAKE",
+          "step": "將網路線接到 Qu-16 dSNAKE 孔與 Stagebox；Stagebox 插電後啟動。Ready 燈亮起後，把需要的通道 Source 改為 dSNAKE。",
+          "function": "用一條網路線連接 Stagebox，傳送多路訊號；講稿中的 Stagebox 提供 16 個輸入與 8 個輸出。",
+          "warning": "dSNAKE 與 Network 用途不同。Stagebox 一孔對應一個 Channel；PP 燈表示幻象電源狀態。",
+          "position": { "left": "14%", "top": "60%", "height": "10%", "width": "7%" }
+        },
+        "usb": {
+          "label": "USB",
+          "step": "接妥 USB 後，選取通道並進入 Processing 的 Source，按 Fn 選擇 USB，再檢查訊號。",
+          "function": "USB B 介面可連接電腦；通道 Source 也可選擇 USB 數位音訊來源。",
+          "warning": "選擇 USB 後不會接收 Local 或 dSNAKE；無聲時先檢查 Source。",
+          "position": { "left": "12.5%", "top": "70.5%", "height": "9%", "width": "5%" }
+        }
+      }
+    }
+  }
+}

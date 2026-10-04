@@ -1,0 +1,11 @@
+
+.brand-header{
+  margin: 0;
+  color: white;
+}
+
+.brand-header p{
+  margin: 0;
+  font: var(--md-sys-typescale-title-large);
+  letter-spacing: 0;
+}
